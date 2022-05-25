@@ -9,5 +9,8 @@ git config --local alias.demo-start 'checkout --detach 0'
 # demo-next: go to the next tag of the demo
 git config --local alias.demo-next '!f() { git checkout --detach $((`git describe --tags` + 1)); }; f'
 
+# demo-prev: go to the previous tag of the demo
+git config --local alias.demo-prev '!f() { git checkout --detach $((`git describe --tags` - 1)); }; f'
+
 # demo-tag: tag current commit
 git config --local alias.demo-tag '!f() { last=$(git for-each-ref --sort="-version:refname" --count=1 --format="%(refname:short)" "refs/tags/*"); if [[ -z "${last}" ]]; then next=0; else next=$(($last + 1)); fi; git tag $next; }; f'

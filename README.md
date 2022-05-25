@@ -13,4 +13,5 @@
 
 - git demo-start: go the beginning of the demo
 - git demo-next: go to the next tag of the demo
+- demo-prev: go to the previous tag of the demo
 - git demo-tag: tag current commit
