@@ -11,6 +11,6 @@
 
 ## git-demo commands
 
-- git demo-init: go the beginning of the demo
+- git demo-start: go the beginning of the demo
 - git demo-next: go to the next tag of the demo
 - git demo-tag: tag current commit
