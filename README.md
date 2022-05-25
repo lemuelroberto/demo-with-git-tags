@@ -1,22 +1,16 @@
 # Demo with git next tag
 
-> This is a demo repository to guide git users to use a git alias when
-> presenting a demo.
+> This is a demo repository to guide git users to use git aliases
+> to present a demo.
 
 ## Setup git alias for the demo
 
 ```bash
-git config --local alias.next '!f() { git checkout --detach $((`git describe --tags` + 1)) 2> /dev/null || echo "git next: the end of the demo"; }; f'
+./setup-demo
 ```
 
-## Go to the demo initial tag
+## git-demo commands
 
-```bash
-git chechout 0
-```
-
-## Navigate through sequential tags
-
-```bash
-git next
-```
+- git demo-init: go the beginning of the demo
+- git demo-next: go to the next tag of the demo
+- git demo-tag: tag current commit
